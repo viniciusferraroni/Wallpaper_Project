@@ -1,12 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Glitch&display=swap');
 
-body{
+body {
+    margin: 0;
+    height: 100vh;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.clock{
-    color: #ffffff;  
-    text-align: center;
+.logo {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url("../assets/gojo_image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.clock {
+    position: absolute;
+    top: -50px; 
+    z-index: 10;
+    color: white;
     font-size: 80px;
-    font-family: "Bitcount Grid Double";
+    font-family: "Rubik Glitch";
+    text-shadow: 2px 2px 0px rgb(104, 104, 104);
+}
+
+.calendar{
+    position: absolute;
+    top: 220px; 
+    z-index: 10;
+    color: white;
+    font-size: 70px;
+    font-family: "Rubik Glitch";
+    text-shadow: 2px 2px 10px black;
 }
