@@ -1,4 +1,5 @@
-var horas = document.getElementById('hours');
+//Clock
+var time = document.getElementById('hours');
 
 function clock() {
 
@@ -8,9 +9,19 @@ function clock() {
     var displayminutes = currentTime.getMinutes();
     var displayseconds = currentTime.getSeconds();
 
-    horas.innerHTML = displayhours + ":" + displayminutes + ":" + displayseconds;
+    if (displayhours < 10) {
+        displayhours = ("0" + displayhours)
+    }
+    if (displayminutes < 10) {
+        displayminutes = ("0" + displayminutes)
+    }
 
+    if (displayseconds < 10) {
+        displayseconds = ("0" + displayseconds)
+    }
+
+    time.innerHTML = displayhours + ":" + displayminutes + ":" + displayseconds;
 
 }
 
-setInterval(clock, 1000);
+setInterval(clock, 100);
