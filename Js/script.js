@@ -34,4 +34,20 @@ function clock() {
 
 setInterval(clock, 100);
 
+function BuscarClima(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Sao%20Paulo,br&units=metric&lang=pt_br&appid=2f0769ba6488ad6f089c3481b881684d')
+        .then(c => c.json())
+        .then(dados => {
+            const temperatura = Math.floor(dados.main.temp);
+
+
+            document.getElementById("temp").innerHTML = temperatura + "°C"
+        }).catch(erro =>{
+            document.getElementById("temp").innerHTML = "";
+        })
+
+}
+
+BuscarClima();
+setInterval(BuscarClima, 600000);
 
